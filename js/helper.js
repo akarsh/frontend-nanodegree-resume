@@ -42,6 +42,7 @@ var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
+var HTMLprojectURL = '<a href="%data%">%data%</a><br>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
@@ -50,15 +51,15 @@ var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
-var HTMLschoolURL = '<br><a href="#">%data%</a>';
+var HTMLschoolURL = '<br><a href="%data%">%data%</a><br>';
 
 var HTMLotherClasses = '<br><h3>Other Classes</h3>';
 var HTMLotherStart = '<div class="other-courses-entry"></div>';
 var HTMLotherSchool = '<a href="#">%data%';
-var HTMLotherTitle = ' - %data%</a>';
+var HTMLotherTitle = ' -- %data%</a>';
 var HTMLotherDates = '<div class="date-text">%data%</div>';
 var HTMLotherLocation = '<div class="location-text">%data%</div>';
-var HTMLotherURL = '<br><a href="#">%data%</a>';
+var HTMLotherURL = '<br><a href="%data%">%data%</a><br>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
@@ -186,7 +187,7 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.

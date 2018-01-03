@@ -84,6 +84,8 @@ p {
   font-size: 14px;
   color: #333;
   line-height: 21px;
+  text-align: justify;
+  padding: 0 4cm 0 0;
 }
 
 a {
@@ -98,6 +100,7 @@ a {
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
+  text-align: justify;
 }
 
 #skills-h3 {
@@ -114,7 +117,6 @@ a {
 }
 
 .white-text {
-  font-weight: bold;
   color: #fff;
 }
 
